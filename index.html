@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Radar Financiero — Sistema de evaluación de riesgos y rendimientos. Metodología CAMEL, Tasa de Rendimiento Real e infraestructura moderna para el mercado de Santa Cruz, Bolivia." />
+  <title>Radar Financiero · Evaluación de Riesgos y Rendimientos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- FONDO -->
+  <canvas id="gridCanvas" aria-hidden="true"></canvas>
+  <div class="orb orb--1" aria-hidden="true"></div>
+  <div class="orb orb--2" aria-hidden="true"></div>
+  <div class="orb orb--3" aria-hidden="true"></div>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <div class="nav__radar" aria-hidden="true">
+          <span class="r-ring r-ring--a"></span>
+          <span class="r-ring r-ring--b"></span>
+          <span class="r-dot"></span>
+          <span class="r-sweep"></span>
+        </div>
+        <span class="nav__name">Radar Financiero</span>
+      </a>
+      <div class="nav__links">
+        <a href="#metodologia" class="nav__link">Metodología</a>
+        <a href="#pilares"     class="nav__link">Pilares</a>
+        <a href="#tecnologia"  class="nav__link">Tecnología</a>
+        <a href="#registro"    class="nav__cta">Unirse</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__content">
+            <span class="badge">Sistema de Evaluación de Riesgos · Santa Cruz, Bolivia</span>
+            <h1 class="hero__title">
+              Decisiones financieras<br/>
+              <span class="grad-text">basadas en datos reales</span>
+            </h1>
+            <p class="hero__desc">
+              Transformamos los datos públicos de la <strong>ASFI</strong> en un
+              <strong>Índice de Solvencia Simplificado</strong> que permite al
+              inversor minorista interpretar ratios bancarias complejas de manera
+              intuitiva, para una toma de decisiones estratégica y fundamentada.
+            </p>
+            <div class="hero__actions">
+              <a href="#registro" class="btn-primary">Acceder a la plataforma →</a>
+              <a href="#metodologia" class="btn-ghost">Conocer más</a>
+            </div>
+          </div>
+
+          <!-- Tarjeta de stats flotante -->
+          <div class="hero__card" aria-hidden="true">
+            <p class="hcard__label">Índice de Solvencia Simplificado</p>
+            <div class="hcard__score">
+              <span class="hcard__value">8.4</span>
+              <span class="hcard__scale">/ 10</span>
+            </div>
+            <div class="hcard__bar-wrap">
+              <div class="hcard__bar">
+                <span class="hcard__fill" style="width:84%"></span>
+              </div>
+              <span class="hcard__status status--ok">Solvente</span>
+            </div>
+            <div class="hcard__divider"></div>
+            <div class="hcard__rows">
+              <div class="hcard__row">
+                <span>Capital</span>
+                <span class="val--ok">Adecuado</span>
+              </div>
+              <div class="hcard__row">
+                <span>Liquidez</span>
+                <span class="val--ok">Alta</span>
+              </div>
+              <div class="hcard__row">
+                <span>Tasa Real</span>
+                <span class="val--warn">+0.4%</span>
+              </div>
+              <div class="hcard__row">
+                <span>IPC Ajustado</span>
+                <span class="val--ok">Positivo</span>
+              </div>
+            </div>
+            <p class="hcard__src">Fuente: ASFI · INE Bolivia</p>
+          </div>
+
+        </div>
+
+        <!-- Métricas de la plataforma -->
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat__n">CAMEL</span>
+            <span class="stat__l">Metodología de auditoría</span>
+          </div>
+          <div class="stat__sep"></div>
+          <div class="stat">
+            <span class="stat__n">ASFI</span>
+            <span class="stat__l">Fuente primaria de datos</span>
+          </div>
+          <div class="stat__sep"></div>
+          <div class="stat">
+            <span class="stat__n">INE</span>
+            <span class="stat__l">IPC e inflación oficial</span>
+          </div>
+          <div class="stat__sep"></div>
+          <div class="stat">
+            <span class="stat__n">100%</span>
+            <span class="stat__l">Datos públicos verificados</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__text">
+            <span class="section-label">¿Qué es Radar Financiero?</span>
+            <h2 class="section-title">
+              La información financiera al alcance del inversor boliviano
+            </h2>
+            <p>
+              A diferencia de los reportes estáticos tradicionales,
+              <strong>Radar Financiero</strong> transforma datos técnicos de la
+              ASFI en indicadores visuales e intuitivos. Calculamos el
+              <em>Índice de Solvencia Simplificado</em> de las entidades bancarias
+              locales y lo presentamos de forma que cualquier persona pueda
+              comprender la solidez de una institución antes de invertir.
+            </p>
+            <p>
+              El proyecto está diseñado para <strong>democratizar la información
+              financiera</strong> en el mercado de Santa Cruz, asegurando que los
+              indicadores de riesgo y rentabilidad estén disponibles de forma masiva,
+              actualizados con precisión técnica y presentados con estándares
+              internacionales.
+            </p>
+          </div>
+          <div class="about__highlights">
+            <div class="highlight">
+              <div class="highlight__ico cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <strong>Datos públicos convertidos en insights</strong>
+                <p>Ratios bancarias complejas presentadas como índices simples de 0 a 10.</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__ico green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div>
+                <strong>Actualización con precisión técnica</strong>
+                <p>Integración directa con reportes oficiales de la ASFI y el INE.</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="highlight__ico gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <strong>Toma de decisiones estratégica</strong>
+                <p>Información en tiempo real para que el inversor actúe con fundamento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ METODOLOGÍA CAMEL ═══════════════ -->
+    <section class="method" id="metodologia">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Pilar I</span>
+          <h2 class="section-title">Metodología <span class="grad-text">CAMEL</span></h2>
+          <p class="section-sub">
+            Un estándar cuantitativo internacional adaptado al mercado boliviano
+            para auditar la salud financiera de las entidades bancarias locales.
+          </p>
+        </div>
+
+        <div class="camel-grid">
+          <div class="camel-card camel-card--featured">
+            <div class="camel-card__letter cyan">C</div>
+            <strong>Capital</strong>
+            <p>Evalúa la suficiencia del capital patrimonial de la entidad frente a sus activos ponderados por riesgo.</p>
+          </div>
+          <div class="camel-card">
+            <div class="camel-card__letter green">A</div>
+            <strong>Activos</strong>
+            <p>Calidad de la cartera crediticia, nivel de morosidad y cobertura de préstamos en riesgo.</p>
+          </div>
+          <div class="camel-card">
+            <div class="camel-card__letter gold">M</div>
+            <strong>Manejo</strong>
+            <p>Eficiencia operativa y capacidad de gestión administrativa de la institución financiera.</p>
+          </div>
+          <div class="camel-card">
+            <div class="camel-card__letter cyan">E</div>
+            <strong>Ingresos</strong>
+            <p>Rentabilidad sostenible medida a través del ROA y ROE ajustados por el contexto económico.</p>
+          </div>
+          <div class="camel-card">
+            <div class="camel-card__letter green">L</div>
+            <strong>Liquidez</strong>
+            <p>Capacidad de la entidad para cumplir obligaciones a corto plazo sin comprometer su estabilidad.</p>
+          </div>
+          <div class="camel-card camel-card--result">
+            <div class="camel-result__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-5"/></svg>
+            </div>
+            <strong>Índice de Solvencia Simplificado</strong>
+            <p>Los 5 factores se ponderan en un único índice visual de 0 a 10, comprensible para cualquier inversor.</p>
+            <span class="badge badge--result">Salida del modelo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TASA REAL ═══════════════ -->
+    <section class="tasa" id="pilares">
+      <div class="container">
+        <div class="tasa__inner">
+          <div class="tasa__text">
+            <span class="section-label">Pilar II</span>
+            <h2 class="section-title">Tasa de Rendimiento <span class="grad-text">Real</span></h2>
+            <p>
+              Las tasas nominales que ofrecen los productos financieros bolivianos
+              no siempre reflejan la ganancia real del inversor.
+              El poder adquisitivo puede erosionarse silenciosamente cuando la
+              <strong>inflación interanual supera el rendimiento nominal</strong>.
+            </p>
+            <p>
+              Radar Financiero calcula la <em>Tasa de Rendimiento Real</em> ajustando
+              la tasa nominal frente a las variaciones del <strong>IPC reportadas
+              por el INE</strong>. Esta operación revela si el capital gestionado
+              <strong>genera ganancia neta</strong> o pierde valor adquisitivo.
+            </p>
+            <div class="formula-box">
+              <p class="formula-box__label">Fórmula de Fisher (simplificada)</p>
+              <code class="formula">
+                Tasa Real ≈ Tasa Nominal − Inflación IPC
+              </code>
+              <p class="formula-box__note">Fuente: INE Bolivia · Ajuste interanual</p>
+            </div>
+          </div>
+          <div class="tasa__visual" aria-hidden="true">
+            <div class="rate-card">
+              <p class="rate-card__title">Escenario de ejemplo</p>
+              <div class="rate-row">
+                <span class="rate-row__label">Tasa nominal DPF</span>
+                <span class="rate-row__val cyan">7.5%</span>
+              </div>
+              <div class="rate-row">
+                <span class="rate-row__label">Inflación IPC anual</span>
+                <span class="rate-row__val gold">3.2%</span>
+              </div>
+              <div class="rate-divider"></div>
+              <div class="rate-row rate-row--result">
+                <span class="rate-row__label">Tasa de Rendimiento Real</span>
+                <span class="rate-row__val green">+4.3%</span>
+              </div>
+              <div class="rate-bar-wrap">
+                <span class="rate-bar-label">Ganancia neta</span>
+                <div class="rate-bar">
+                  <span class="rate-bar__fill" style="width:43%"></span>
+                </div>
+              </div>
+              <p class="rate-card__note">El capital crece en términos reales ✓</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TECNOLOGÍA ═══════════════ -->
+    <section class="tech" id="tecnologia">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Pilar III</span>
+          <h2 class="section-title">Arquitectura <span class="grad-text">Moderna</span></h2>
+          <p class="section-sub">
+            Una infraestructura tecnológica No-Code y escalable que garantiza datos
+            actualizados, control de versiones y disponibilidad masiva.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+
+          <div class="tech-card">
+            <div class="tech-card__logo cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="tech-card__name">Supabase</h3>
+            <p class="tech-card__desc">
+              Base de datos PostgreSQL en la nube con autenticación, RLS y API REST
+              lista para producción. Almacena y gestiona todos los registros de usuarios
+              con escalabilidad automática.
+            </p>
+            <div class="tech-card__tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">REST API</span>
+              <span class="tag">RLS</span>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card__logo green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="tech-card__name">GitHub</h3>
+            <p class="tech-card__desc">
+              Control de versiones profesional para gestionar el historial de cambios,
+              colaboración en equipo y despliegue continuo de la plataforma con
+              trazabilidad completa.
+            </p>
+            <div class="tech-card__tags">
+              <span class="tag">Git</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Versiones</span>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card__logo gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="tech-card__name">Antigravity</h3>
+            <p class="tech-card__desc">
+              Interfaz dinámica y visual construida con tecnología de IA avanzada.
+              Permite iteraciones rápidas en el diseño y desarrollo sin sacrificar
+              calidad ni rendimiento de la plataforma.
+            </p>
+            <div class="tech-card__tags">
+              <span class="tag">No-Code</span>
+              <span class="tag">IA</span>
+              <span class="tag">Interfaz dinámica</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ POR QUÉ SANTA CRUZ ═══════════════ -->
+    <section class="market">
+      <div class="container">
+        <div class="market__inner">
+          <div class="market__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <strong>Santa Cruz</strong>
+            <span>Bolivia</span>
+          </div>
+          <div class="market__text">
+            <span class="section-label">Mercado objetivo</span>
+            <h2 class="section-title">
+              Hecho para el inversor de <span class="grad-text">Santa Cruz</span>
+            </h2>
+            <p>
+              El ecosistema financiero de Santa Cruz concentra la mayor actividad
+              económica de Bolivia, con una creciente demanda de herramientas
+              de análisis accesibles. Radar Financiero cubre ese vacío:
+              información de calidad institucional, presentada con claridad
+              para el inversor individual.
+            </p>
+            <ul class="market__list">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z"/></svg>
+                Datos de la ASFI reinterpretados sin tecnicismos
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z"/></svg>
+                Inflación IPC ajustada al contexto boliviano real
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z"/></svg>
+                Herramienta gratuita y de acceso masivo
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5z"/></svg>
+                Actualización continua con fuentes oficiales
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ REGISTRO (FORMULARIO) ═══════════════ -->
+    <section class="registro" id="registro">
+      <div class="container">
+
+        <div class="reg__head">
+          <span class="section-label">Acceso gratuito</span>
+          <h2 class="section-title">
+            Únete a <span class="grad-text">Radar Financiero</span>
+          </h2>
+          <p class="section-sub">
+            Regístrate y sé de los primeros en acceder al análisis financiero
+            más completo del mercado de Santa Cruz.
+          </p>
+        </div>
+
+        <div class="reg__layout">
+
+          <!-- Beneficios -->
+          <div class="reg__benefits">
+            <h3 class="reg__benefits-title">¿Qué obtendrás?</h3>
+            <ul class="benefits-list">
+              <li class="benefit">
+                <div class="benefit__dot cyan"></div>
+                <div>
+                  <strong>Índice de Solvencia Bancaria</strong>
+                  <p>Scores actualizados de cada entidad financiera regulada por la ASFI.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <div class="benefit__dot green"></div>
+                <div>
+                  <strong>Calculadora de Tasa Real</strong>
+                  <p>Descubre si tu DPF o cuenta de ahorro realmente gana poder adquisitivo.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <div class="benefit__dot gold"></div>
+                <div>
+                  <strong>Alertas y actualizaciones</strong>
+                  <p>Notificaciones cuando cambien los indicadores de las entidades que sigues.</p>
+                </div>
+              </li>
+              <li class="benefit">
+                <div class="benefit__dot cyan"></div>
+                <div>
+                  <strong>Dashboard personalizado</strong>
+                  <p>Visualiza y compara bancos lado a lado con gráficos claros y modernos.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card del formulario -->
+          <div class="card">
+            <div class="card__top">
+              <p class="card__overline">Registro gratuito</p>
+              <h2 class="card__title">Crear cuenta</h2>
+              <p class="card__sub">Solo necesitamos tus datos básicos para empezar.</p>
+            </div>
+
+            <div id="alert" class="alert hidden" role="alert" aria-live="polite"></div>
+
+            <form id="registerForm" class="form" novalidate>
+
+              <div class="field" id="group-nombre">
+                <label class="field__label" for="nombre">Nombre completo <span class="req">*</span></label>
+                <div class="field__wrap">
+                  <svg class="field__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  <input id="nombre" name="nombre" type="text" class="field__input"
+                    placeholder="Ej. María García López"
+                    autocomplete="name" required minlength="3" maxlength="120" />
+                </div>
+                <span class="field__err" id="error-nombre"></span>
+              </div>
+
+              <div class="field" id="group-telefono">
+                <label class="field__label" for="telefono">Teléfono <span class="req">*</span></label>
+                <div class="field__wrap">
+                  <svg class="field__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg>
+                  <input id="telefono" name="telefono" type="tel" class="field__input"
+                    placeholder="Ej. +591 7 123 4567"
+                    autocomplete="tel" required maxlength="20" />
+                </div>
+                <span class="field__err" id="error-telefono"></span>
+              </div>
+
+              <div class="field" id="group-correo">
+                <label class="field__label" for="correo">Correo electrónico <span class="req">*</span></label>
+                <div class="field__wrap">
+                  <svg class="field__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                  <input id="correo" name="correo" type="email" class="field__input"
+                    placeholder="Ej. maria@correo.com"
+                    autocomplete="email" required maxlength="150" />
+                </div>
+                <span class="field__err" id="error-correo"></span>
+              </div>
+
+              <button id="submitBtn" type="submit" class="btn">
+                <span class="btn__text">Acceder a la plataforma</span>
+                <span class="btn__spinner hidden" aria-hidden="true"></span>
+                <svg class="btn__arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+              </button>
+
+            </form>
+
+            <p class="card__footer">
+              Al registrarte aceptas nuestros <a href="#" class="lnk">Términos de uso</a>
+              y <a href="#" class="lnk">Política de datos</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Radar Financiero</span>
+          <span class="footer__sub">Santa Cruz · Bolivia · 2026</span>
+        </div>
+        <p class="footer__copy">
+          Datos tomados de fuentes oficiales: ASFI e INE Bolivia.<br/>
+          Herramienta de análisis financiero independiente.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    // Grid canvas de fondo
+    (function(){
+      const cv = document.getElementById('gridCanvas');
+      const ctx = cv.getContext('2d');
+      function resize(){
+        cv.width = window.innerWidth; cv.height = window.innerHeight; draw();
+      }
+      function draw(){
+        ctx.clearRect(0,0,cv.width,cv.height);
+        ctx.strokeStyle = 'rgba(0,212,255,0.035)';
+        ctx.lineWidth = 1;
+        const s = 60;
+        for(let x=0;x<cv.width;x+=s){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,cv.height);ctx.stroke();}
+        for(let y=0;y<cv.height;y+=s){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(cv.width,y);ctx.stroke();}
+      }
+      window.addEventListener('resize', resize);
+      resize();
+    })();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+
+    // Animaciones al scroll (Intersection Observer)
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(
+      '.about__inner, .camel-card, .tech-card, .tasa__inner, .market__inner, .benefit, .hero__card'
+    ).forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+  </script>
+
+</body>
+</html>
